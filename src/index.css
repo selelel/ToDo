@@ -2,9 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
 @layer base{
 
   html{
     @apply bg-palette-200;
+    font-family: "Roboto Mono", sans-serif;
+    .completed{
+      text-decoration: line-through;
+      text-decoration-thickness: 1px;
+      font-style: italic;
+
+    }
+  }
+  
+}
+
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
   }
 }
